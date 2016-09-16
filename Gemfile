@@ -6,7 +6,9 @@ gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 # my gems
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
-gem "font-awesome-rails"
+gem 'font-awesome-rails'
+# Use acts_as_votable to enable likes and following for our users
+gem 'acts_as_votable'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
