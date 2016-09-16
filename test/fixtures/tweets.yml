@@ -2,8 +2,8 @@
 
 one:
   message: MyText
-  User: one
+  user: one
 
 two:
   message: MyText
-  User: two
+  user: two

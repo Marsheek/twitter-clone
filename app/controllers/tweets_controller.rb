@@ -25,7 +25,9 @@ class TweetsController < ApplicationController
   # POST /tweets.json
   def create
     @tweet = Tweet.new(tweet_params)
-    @tweet.User_id = current_user.id if current_user
+
+    # Set the tweets user_id to be that of the current_user. Implemented to add extra security.
+    @tweet.user_id = current_user.id if current_user
 
     respond_to do |format|
       if @tweet.save
@@ -70,6 +72,6 @@ class TweetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tweet_params
-      params.require(:tweet).permit(:message, :User_id)
+      params.require(:tweet).permit(:message, :user_id)
     end
 end
